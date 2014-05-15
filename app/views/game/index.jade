@@ -1,0 +1,16 @@
+extends ../shared/template
+
+block content
+  h1 This Game Again
+
+  #userlogin
+    input#username(type=text, autofocus=true, placeholder='Username')
+    button#login Log in
+
+  #dashboard
+
+  #forest
+
+
+block scripts
+  script(src='/js/es6/compiled/game.js')
