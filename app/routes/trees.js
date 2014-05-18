@@ -25,6 +25,14 @@ exports.grow = (req, res)=>{
   });
 };
 
+exports.remove = (req, res)=>{
+  Tree.findByTreeId(req.params.treeId, tree =>{
+    tree.remove(tree._id, ()=>{
+      res.render('trees/tree', {tree: tree});
+    });
+  });
+};
+
 exports.chop = (req, res)=>{
   Tree.findByTreeId(req.params.treeId, tree =>{
     User.findByUserId(tree.userId, user=>{

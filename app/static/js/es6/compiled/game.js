@@ -25,6 +25,7 @@ function ajax(url, type) {
     $('#dashboard').on('click', '#getcash', cash);
     $('#dashboard').on('click', '#getautogrow', autogrow);
     $('#dashboard').on('click', '#getautoseed', autoseed);
+    $('#dashboard').on('click', '#getautoroot', autoroot);
     $('#forest').on('click', '.grow', grow);
     $('#forest').on('click', '.chop', chop);
     preloadAssets();
@@ -86,6 +87,13 @@ function ajax(url, type) {
   function autoseed() {
     var userId = $('#user').attr('data-id');
     ajax(("/users/" + userId + "/purchase/autoseed"), 'put', null, (function(h) {
+      $('#dashboard').empty().append(h.dashboard);
+      $('#items').empty().append(h.inventory);
+    }), 'json');
+  }
+  function autoroot() {
+    var userId = $('#user').attr('data-id');
+    ajax(("/users/" + userId + "/purchase/autoroot"), 'put', null, (function(h) {
       $('#dashboard').empty().append(h.dashboard);
       $('#items').empty().append(h.inventory);
     }), 'json');

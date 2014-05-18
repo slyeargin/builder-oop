@@ -33,6 +33,11 @@ class User{
     return this.cash >= 75000 && !hasAutoseed;
   }
 
+  get isAutorootAvailable(){
+    var hasAutoroot = _.any(this.items, {type: 'autoroot'});
+    return this.cash >= 85000 && !hasAutoroot;
+  }
+
   static login(username, fn){
     username = username.trim().toLowerCase();
     users.findOne({username: username}, (e, user)=>{

@@ -33,7 +33,6 @@
     var userId = $('#user').attr('data-id');
 
     if (population < 50){
-      console.log('YOU CAN PLANT');
       ajax('/trees/plant', 'POST', {userId: userId}, h =>{
         $('#forest').append(h);
       });

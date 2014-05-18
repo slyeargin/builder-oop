@@ -31,7 +31,7 @@ function load(app, fn){
   app.post('/trees/plant', dbg, trees.plant);
   app.put('/trees/:treeId/grow', dbg, trees.grow);
   app.put('/trees/:treeId/chop', dbg, trees.chop);
-  
+  app.delete('/trees/:treeId/remove', dbg, trees.remove);
   app.get('/help', dbg, home.help);
   console.log('Routes Loaded');
   fn();

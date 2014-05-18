@@ -23,7 +23,6 @@
     var population = $('.alive:not(.beanstalk)').length;
     var userId = $('#user').attr('data-id');
     if (population < 50) {
-      console.log('YOU CAN PLANT');
       ajax('/trees/plant', 'POST', {userId: userId}, (function(h) {
         $('#forest').append(h);
       }));

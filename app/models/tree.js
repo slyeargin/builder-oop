@@ -32,6 +32,10 @@ class Tree{
     trees.save(this, ()=>fn());
   }
 
+  remove(treeId, fn){
+    trees.findAndRemove({_id: treeId}, ()=>fn());
+  }
+
   get classes(){
     var classes = [];
 
