@@ -23,11 +23,15 @@ function load(app, fn){
   app.get('/game', dbg, game.index);
   app.post('/login', dbg, users.login);
   app.get('/dashboard/:userId', dbg, users.dashboard);
+
+  app.put('/users/:userId/purchase/:item', dbg, users.purchase);
   app.put('/cash/:userId', dbg, users.cashout);
+
   app.get('/trees', dbg, trees.forest);
   app.post('/trees/plant', dbg, trees.plant);
   app.put('/trees/:treeId/grow', dbg, trees.grow);
   app.put('/trees/:treeId/chop', dbg, trees.chop);
+  
   app.get('/help', dbg, home.help);
   console.log('Routes Loaded');
   fn();
