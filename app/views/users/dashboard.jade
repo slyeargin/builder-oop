@@ -1,5 +1,5 @@
-#user(data-id=user._id.toString())= user.username
-#wood #{parseInt(user.wood)}
+#user(data-id=user._id.toString()).fa.fa-user #{user.username}
+#wood #{parseInt(user.wood.toFixed(2))}
 #cash #{parseInt(user.cash)}
 
 #controls
