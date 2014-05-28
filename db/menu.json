@@ -1,0 +1,10 @@
+{"type": "lunch", "food": "taco", "price": "2.50", "calories": "250"}
+{"type": "lunch", "food": "quesadilla", "price": "5.75", "calories": "450"}
+{"type": "lunch", "food": "burrito", "price": "7.50", "calories": "1050"}
+{"type": "dinner", "food": "enchilada", "price": "8.25", "calories": "1250"}
+{"type": "dinner", "food": "fajitas", "price": "14.50", "calories": "900"}
+{"type": "dinner", "food": "burrito plate", "price": "12.50", "calories": "1450"}
+{"type": "dinner", "food": "enchilada plate", "price": "13.25", "calories": "1500"}
+{"type": "dinner", "food": "taco plate", "price": "7.50", "calories": "800"}
+{"type": "late night", "food": "nachos", "price": "6.00", "calories": "700"}
+{"type": "late night", "food": "fried avocado", "price": "2.50", "calories": "250"}
